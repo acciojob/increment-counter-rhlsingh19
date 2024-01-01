@@ -8,7 +8,30 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+<p id="counter">0</p>
+<button id="incrementBtn">Increment</button>
     <script type="text/javascript" src="./script.js">
+		// Get references to the counter and button elements
+const counterElement = document.getElementById('counter');
+const incrementButton = document.getElementById('incrementBtn');
+
+// Initial counter value
+let counterValue = 0;
+
+// Function to handle the button click
+function handleClick() {
+  // Show the current counter value in an alert
+  alert("Current Counter Value: " + counterValue);
+  
+  // Increment the counter value
+  counterValue++;
+  
+  // Update the counter text content
+  counterElement.textContent = counterValue;
+}
+
+// Attach a click event listener to the button
+incrementButton.addEventListener('click', handleClick);
 </script>
 
 </body>
